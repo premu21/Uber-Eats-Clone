@@ -1,15 +1,18 @@
-import { View, Text } from "react-native";
+import Home from "./screens/Home";
+import { StyleSheet, SafeAreaView, View } from 'react-native'
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
+    <View style={styles.container}>
+      <Home />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: Platform.OS === 'android' ? 30 : 0,
+  },
+});
+
